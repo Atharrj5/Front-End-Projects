@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bulb Design Using DOM</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin-top: 50px;
+        }
+        #bulb {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background-color: white;
+            border: 3px solid #ccc;
+            margin: 20px auto;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>💡 Bulb Control Using DOM</h2>
+
+    <div id="bulb"></div>
+
+    <button onclick="turnOn()">Turn ON</button>
+    <button onclick="turnOff()">Turn OFF</button>
+
+    <script>
+        function turnOn() {
+            let color = prompt("Enter a color for the bulb (e.g., red, green, yellow):");
+            if (color) {
+                document.getElementById("bulb").style.backgroundColor = color;
+            }
+        }
+
+        function turnOff() {
+            document.getElementById("bulb").style.backgroundColor = "white";
+        }
+    </script>
+
+</body>
+</html>
